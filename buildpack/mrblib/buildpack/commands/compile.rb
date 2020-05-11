@@ -37,9 +37,9 @@ module Buildpack
 
           tuple =
             if dependencies["ember-cli-deploy"]
-              EmberBuildTuple.new(true, "ember deploy production", StaticConfig::DEFAULT_EMBER_CLI_DEPLOY_DIR)
+              EmberBuildTuple.new(true, "ember deploy dictate", StaticConfig::DEFAULT_EMBER_CLI_DEPLOY_DIR)
             else
-              EmberBuildTuple.new(false, "ember build --environment production", StaticConfig::DEFAULT_EMBER_CLI_DIR)
+              EmberBuildTuple.new(false, "ember build --environment dictate", StaticConfig::DEFAULT_EMBER_CLI_DIR)
             end
 
           @output_io.topic "Building ember assets"
